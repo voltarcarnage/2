@@ -1,5 +1,5 @@
-#include "dialog.h"
-#include "errors.h"
+#include "headers/dialog.h"
+#include "headers/errors.h"
 
 namespace Dialogue{
 

@@ -1,4 +1,4 @@
-#include "class.h"
+#include "headers/class.h"
 
 #pragma once
 

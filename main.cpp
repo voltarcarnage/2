@@ -1,5 +1,5 @@
-#include "class.h"
-#include "dialog.h"
+#include "headers/class.h"
+#include "headers/dialog.h"
 
 int main()
 {
