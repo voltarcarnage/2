@@ -1,5 +1,4 @@
 #include "headers/dialog.h"
-#include "headers/errors.h"
 
 namespace Dialogue{
 
