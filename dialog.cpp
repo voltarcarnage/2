@@ -16,27 +16,27 @@ namespace Dialogue{
         }
 
         case 1: {
-          f1();
+          menuGetY();
           continue;
         }
 
         case 2: {
-          f2();
+          menuGetDistance();
           continue;
         }
 
         case 3: {
-          f3();
+          menuGetRadiuses();
           continue;
         }
 
         case 4: {
-          f4();
+          menuGetSquare();
           continue;
         }
 
         case 5: {
-          f5();
+          menuGetInflectPoints();
           continue;
         }
 
@@ -50,7 +50,7 @@ namespace Dialogue{
     }
   }
 
-  void f1()
+  void menuGetY()
   {
     double a,l,x;
     getNum("Enter parameter a: ", a);
@@ -64,7 +64,7 @@ namespace Dialogue{
       std::cout << "\ny(" << x << ") is Undefined" << std::endl;
   }
 
-  void f2()
+  void menuGetDistance()
   {
     double a,l,phi;
     getNum("Enter parameter a: ", a);
@@ -78,7 +78,7 @@ namespace Dialogue{
       std::cout << "\nr(" << phi << ") is Undefined" << std::endl;
   }
 
-  void f3()
+  void menuGetRadiuses()
   {
     double a,l;
 
@@ -99,19 +99,20 @@ namespace Dialogue{
       std::cout << "\n1 point is: " << point.getRa() << "\n2 point is: " << point.getRc() << "\n3 point is: " << point.getRo() << std::endl;
   }
 
-  void f4()
+  void menuGetSquare()
   {
     double a,l;
     getNum("Enter parameter a: ", a);
     getNum("Enter parameter l: ", l);
     Line::Curve point(a,l);
+
     if(Errors::exceptions(point.getSquare()))
       std::cout << "\nS = " << point.getSquare() << std::endl;
     else
       std::cout << "\nS is Undefined" << std::endl;
   }
 
-  void f5()
+  void menuGetInflectPoints()
   {
     double a,l;
     getNum("Enter parameter a: ", a);
@@ -132,7 +133,7 @@ namespace Dialogue{
       double y = (x/(x-a)) * sqrt(pow(l,2) - pow((x - a),2));
       double y1 = (-x/(-x-a)) * sqrt(pow(l,2) - pow((-x - a),2));
       if(y && y1 && Errors::exceptions(point.getInflectPoints1()))
-        std::cout << "The point is:\n" << "("<< x << "," << y << ");\n" << "("<< -x << "," << y1 << ");\n" << "("<< 0 << "," << 0 << ");" << std::endl;
+        std::cout << "The points is:\n" << "("<< x << "," << y << ");\n" << "("<< -x << "," << y1 << ");\n" << "("<< 0 << "," << 0 << ");" << std::endl;
       else
         std::cout << "\nThe point is Undefined" << std::endl;
     }
@@ -143,7 +144,7 @@ namespace Dialogue{
       double y = (x/(x-a)) * sqrt(pow(l,2) - pow((x - a),2));
       double y1 = (x1/(x1-a)) * sqrt(pow(l,2) - pow((x1 - a),2));
       if(y && y1 && Errors::exceptions(point.getInflectPoints1()) && Errors::exceptions(point.getInflectPoints2()))
-        std::cout << "The point is:\n" << "("<< x << "," << y << ");\n" << "("<< x1 << "," << y1 << ");\n" << std::endl;
+        std::cout << "The points is:\n" << "("<< x << "," << y << ");\n" << "("<< x1 << "," << y1 << ");\n" << std::endl;
       else
         std::cout << "\nThe point is Undefined" << std::endl;
     }

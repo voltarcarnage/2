@@ -1,3 +1,5 @@
+#include <limits>
+
 #include "class.h"
 #include "errors.h"
 
@@ -14,7 +16,7 @@ namespace Dialogue{
       while(!std::cin.good())
       {
         std::cin.clear();
-        std::cin.ignore(/*std::numeric_limits<std::streamsize>::max()*/ 1000,'\n');
+        std::cin.ignore(std::numeric_limits<std::streamsize>::max(),'\n');
         std::cout << "\nInvalid value\n" << std::endl;
         std::cout << msg;
         std::cin >> a;
@@ -25,9 +27,9 @@ namespace Dialogue{
 
     void show();
     void dialogueMenu();
-    void f1();
-    void f2();
-    void f3();
-    void f4();
-    void f5();
+    void menuGetY();
+    void menuGetDistance();
+    void menuGetRadiuses();
+    void menuGetSquare();
+    void menuGetInflectPoints();
 }
