@@ -9,7 +9,7 @@ namespace Line{
     private:
       double a,l;
     public:
-       Curve(double a0, double l0) : a(a0), l(l0) {}
+       Curve(double a0 = 0, double l0 = 0) : a(a0), l(l0) {}
        double getY(double x) const;
        double getDistance(double phi) const;
        double getRa() const;
@@ -18,7 +18,8 @@ namespace Line{
        double getSquare() const;
        double getInflectPoints1() const;
        double getInflectPoints2() const;
-
+       double getA() const {return a;}
+       double getL() const {return l;}
     };
 
 }
